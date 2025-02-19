@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADICION Y CONVERCION DE RECURSOS</title>
+  <style>
+    /* Elimina márgenes y paddings por defecto en todo el body y html */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* Asegura que el contenedor ocupe toda la pantalla */
+    .split-container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Asegura que el iframe ocupe toda la pantalla */
+    .split-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none; /* Elimina el borde del iframe */
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background-color: #f0f0f0;
+      margin: 0;
+      z-index: 1; /* Asegura que el encabezado esté por encima del iframe */
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ADICION Y CONVERCION DE RECURSOS</h1>
+  </header>
+
+  <div class="split-container">
+    <!-- Sección que contiene el iframe -->
+    <iframe 
+      src="https://app.powerbi.com/view?r=eyJrIjoiYzE0MDBkNTUtY2JjZC00ODc5LTk3ZjMtMDYwOTlkNGZiOGYyIiwidCI6IjM4NTg0Mzk5LWJlMzctNDAwOS1iN2NiLTc5ZWM3NWU5NGE5YSIsImMiOjJ9" 
+      frameborder="0">
+    </iframe>
+  </div>
+</body>
+</html>

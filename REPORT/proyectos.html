@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos Estratégicos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <h1>Proyectos Estratégicos</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="navigation">
+      <ul>
+        <li><a href="geologia.html">Geología Operaciones</a></li>
+        <li><a href="qa-qc.html">QA/QC</a></li>
+        <li><a href="infill.html">Infill</a></li>
+        <li><a href="proyectos.html">Proyectos Estratégicos</a></li>
+        <li><a href="seguridad.html">Seguridad</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main>
+    <aside class="sidebar">
+      <button onclick="window.location.href='perforacion.html'">PERFORACIÓN</button>
+      <button onclick="window.location.href='logueo.html'">LOGUEO</button>
+      <button onclick="window.location.href='resultados.html'">RESULTADOS</button>
+      <button onclick="window.location.href='plot3d.html'">PLOT 3D</button>
+    </aside>
+    <section class="content">
+      <p>CAMBIO GEOGRAFICO EN EL TIEMPO "CANCHA - 100"</p>
+      <div class="image-slider">
+        <img src="assets/inicio.jpg" alt="Imagen 1" class="slider-image">
+        <img src="assets/intermedio.jpg" alt="Imagen 2" class="slider-image">
+        <img src="assets/presente.jpg" alt="Imagen 3" class="slider-image">
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.navigation');
+      nav.classList.toggle('visible');
+    }
+// CODIGO PARA SLIDER
+    let currentIndex = 0;
+const images = document.querySelectorAll('.slider-image');
+
+function changeImage() {
+  images.forEach((img, index) => {
+    img.style.display = index === currentIndex ? 'block' : 'none';
+  });
+  currentIndex = (currentIndex + 1) % images.length;
+}
+
+// Cambiar imagen cada 3 segundos
+setInterval(changeImage, 3000);
+  </script>
+</body>
+</html>

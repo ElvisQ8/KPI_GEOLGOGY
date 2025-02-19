@@ -1,0 +1,247 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff !important;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+/* Header Navigation */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  position: fixed; /* Encabezado fijo */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navigation {
+  display: flex;
+  gap: 15px;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navigation ul li {
+  margin: 0;
+}
+
+.navigation ul li a {
+  color: white !important; /* Cambia a blanco */
+  text-decoration: none !important; /* Quita el subrayado */
+  font-size: 1rem;
+  padding: 10px 15px;
+  background-color: #444;
+  border-radius: 4px;
+}
+
+.navigation ul li a:hover {
+  background-color: #555;
+  color: #ccc !important; /* Cambia a gris claro */
+}
+
+/* Main Container */
+main {
+  display: flex;
+  margin-top: 70px; /* Espacio para el encabezado fijo */
+  height: calc(100vh - 70px); /* Altura completa menos el encabezado */
+}
+
+/* Sidebar Menu for Project Buttons */
+.sidebar {
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+  padding: 10px;
+  overflow-y: auto; /* Scroll si el contenido excede el espacio */
+  border-right: 1px solid #ddd; /* Borde para separar el menú del contenido */
+}
+
+.sidebar button {
+  background-color: #919191;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar button:hover {
+  background-color: #8b8b8b;
+}
+
+.sidebar button:active {
+  background-color: #6d6d6d;
+}
+
+.sidebar a {
+  color: rgb(255, 255, 255) !important; /* Cambia a blanco */
+  text-decoration: none !important;
+}
+
+.sidebar a:hover {
+  color: #ccc !important;
+  text-decoration: underline !important;
+}
+
+/* Content Section */
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #ffffff;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: 20px;
+  padding: 20px;
+  min-height: 90vh; /* Hace que el contenedor ocupe al menos toda la pantalla */
+  margin-top: 50px; /* Ajusta este valor para separarlas del borde superior */
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 320px;
+  min-height: 150px;
+  max-height: 150px; /* Ajusta este valor según necesites */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+  }
+
+  .navigation.visible {
+    display: flex;
+  }
+
+  .navigation ul li a {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .sidebar {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .sidebar button {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation ul li a {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .sidebar button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* CODIFICACION PARA SLIDER */
+.image-slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Máximo ancho del slider */
+  margin: 20px auto;
+  overflow: hidden;
+  text-align: center; /* Centra las imágenes dentro del contenedor */
+  margin: 0 auto; /* Asegura que la imagen esté centrada */
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+  display: none; /* Las imágenes estarán ocultas por defecto */
+}
+
+.slider-image:first-child {
+  display: block; /* Mostrar la primera imagen por defecto */
+}
