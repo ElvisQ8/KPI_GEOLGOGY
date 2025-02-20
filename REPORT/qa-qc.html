@@ -27,12 +27,38 @@
       border: none; /* Elimina el borde del iframe */
     }
 
-    h1 {
-      text-align: center;
-      padding: 20px;
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
       background-color: #f0f0f0;
+    }
+
+    h1 {
       margin: 0;
-      z-index: 1; /* Asegura que el encabezado esté por encima del iframe */
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    /* Contenedor de los botones */
+    .button-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    .button-container button {
+      padding: 5px 18x;
+      font-size: 11px;
+      border: none;
+      cursor: pointer;
+      background-color: #b6b6b6;
+      color: rgb(22, 22, 22);
+      border-radius: 5px;
+    }
+
+    .button-container button:hover {
+      background-color: #b6b6b6;
     }
 
   </style>
@@ -40,12 +66,16 @@
 <body>
   <header>
     <h1>BASE DE DATOS Y QA/QC</h1>
+    <div class="button-container">
+      <button onclick="location.href='dashboard.html'">DASHBOARD</button>
+      <button onclick="location.href='qa-qc_densidad.html'">DENSIDAD</button>
+    </div>
   </header>
 
   <div class="split-container">
     <!-- Sección que contiene el iframe -->
     <iframe 
-      src="https://app.powerbi.com/view?r=eyJrIjoiYzE0MDBkNTUtY2JjZC00ODc5LTk3ZjMtMDYwOTlkNGZiOGYyIiwidCI6IjM4NTg0Mzk5LWJlMzctNDAwOS1iN2NiLTc5ZWM3NWU5NGE5YSIsImMiOjJ9" 
+      src="https://app.powerbi.com/reportEmbed?reportId=b8016134-2749-401d-9245-2b4e5d3716ed&autoAuth=true&ctid=49158df8-04df-4db2-a1ae-ee3949ca3984"
       frameborder="0">
     </iframe>
   </div>
